@@ -1,0 +1,9 @@
+hdm=1
+mpurate=auto
+dvimode="hd720 omapfb.vram=0:8M,1:4M,2:4M"
+vram=16M
+
+console="tty0 console=ttyO0,115200n8"
+#mmcroot=/dev/mmcblk0p2
+
+uenvcmd=if gpio input 54; then gpio set 52; sleep 2; set mmcroot /dev/mmcblk0p3; else gpio set 53; sleep 2; set mmcroot /dev/mmcblk0p2; fi; if gpio input 55; then set fdtfile am335x-botball-lcd.dtb; else set fdtfile am335x-botball-hdmi.dtb; fi; if gpio input 55; then set optargs "consoleblank=0 hdmi=0 fbcon=rotate:2"; else set optargs "consoleblank=0 hdmi=1"; fi;
