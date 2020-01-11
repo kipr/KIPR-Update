@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FW_VERSION=25.3
+FW_VERSION=25.4
 
 echo "   "
 echo "Starting Wombat Update #$FW_VERSION"
@@ -28,12 +28,12 @@ rm -r /usr/local/bin/botui
 # libwallaby
 echo "Updating libwallaby..."
 sudo apt-get remove libwallaby -y
-sudo dpkg -i pkgs/libwallaby_25.3-1_armhf.deb
+sudo dpkg -i pkgs/libwallaby_25.4-1_armhf.deb
 
 # botui
 echo "Updating botui..."
 sudo apt-get remove botui -y
-sudo dpkg -i pkgs/botui_25.3-1_armhf.deb
+sudo dpkg -i pkgs/botui_25.4-1_armhf.deb
 
 #Harrogate
 echo "Updating harrogate..."
@@ -70,9 +70,15 @@ sudo cp $TARGET /usr/bin/
 TARGET=files/wallaby_set_serial.sh
 sudo cp $TARGET /usr/bin/
 
-#Copying the get Pi ID Code
+#Copying the get ID Code
 TARGET=files/wallaby_get_id.sh
 sudo cp $TARGET /usr/bin/
+
+#sh file to Update online
+TARGET=files/updateMe.sh
+echo "Copying the Online Updator"
+cp $TARGET /home/pi
+
 
 sudo chmod u+x /usr/bin/wallaby_*
 echo "Permissions Granted."
