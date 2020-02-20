@@ -1,5 +1,6 @@
 # KIPR-Update
 Repository for pulling updates for KIPR Controllers
+This is pulled when you hit "Online Update" from the UI
 
 **Latest versions:**
 
