@@ -28,12 +28,12 @@ rm -r /usr/local/bin/botui
 # libwallaby
 echo "Updating libwallaby..."
 sudo apt-get remove libwallaby -y
-sudo dpkg -i pkgs/libwallaby_25.7-1_armhf.deb
+sudo dpkg -i pkgs/libwallaby.deb
 
 # botui
 echo "Updating botui..."
 sudo apt-get remove botui -y
-sudo dpkg -i pkgs/botui_25.7-1_armhf.deb
+sudo dpkg -i pkgs/botui.deb
 
 #Harrogate
 echo "Updating harrogate..."
