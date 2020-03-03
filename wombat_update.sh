@@ -83,8 +83,8 @@ sudo chmod u+x /usr/bin/wallaby_*
 echo "Permissions Granted."
 
 #Copying the Backup Code
-TARGET=files/Backup
-sudo cp -r $TARGET /home/root/got2/
+mkdir /home/root/got2/Backup
+sudo cp -r files/Backup/* /home/root/got2/Backup
 
 
 echo "Flashing the Processor"
