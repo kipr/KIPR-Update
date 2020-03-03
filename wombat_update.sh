@@ -83,8 +83,9 @@ sudo chmod u+x /usr/bin/wallaby_*
 echo "Permissions Granted."
 
 #Copying the Backup Code
+echo Installing KIPR Backup Utility
 mkdir /home/root/got2/Backup
-sudo cp -r files/Backup/* /home/root/got2/Backup
+sudo cp -r files/Backup/* /home/pi/got2/Backup
 
 
 echo "Flashing the Processor"
