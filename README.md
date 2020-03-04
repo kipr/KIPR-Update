@@ -4,5 +4,5 @@ This is pulled when you hit "Online Update" from the UI
 
 **Latest versions:**
 
-  -[Botui-25.6](https://github.com/kipr/botui);
-  -[Libwallaby-25.6](https://github.com/kipr/libwallaby);
+  -[Botui-25.7](https://github.com/kipr/botui);
+  -[Libwallaby-25.7](https://github.com/kipr/libwallaby);
