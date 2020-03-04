@@ -23,7 +23,7 @@ mount -o remount,rw /
 #
 ###############################
 rm -r /usr/local/bin/botui
-
+rm -r /usr/bin/botui
 
 # libwallaby
 echo "Updating libwallaby..."
