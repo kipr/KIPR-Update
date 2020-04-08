@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FW_VERSION=25.6
+FW_VERSION=25.8
 
 echo "   "
 echo "Starting Wombat Update #$FW_VERSION"
@@ -28,12 +28,12 @@ rm -r /usr/bin/botui
 # libwallaby
 echo "Updating libwallaby..."
 sudo apt-get remove libwallaby -y
-sudo dpkg -i pkgs/libwallaby_25.6-1_armhf.deb
+sudo dpkg -i pkgs/libwallaby.deb
 
 # botui
 echo "Updating botui..."
 sudo apt-get remove botui -y
-sudo dpkg -i pkgs/botui_25.6-1_armhf.deb
+sudo dpkg -i pkgs/botui.deb
 
 #Harrogate
 echo "Updating harrogate..."
@@ -57,6 +57,8 @@ TARGET=files/wifi_configurator.py
 echo "Copying the Wifi Configurator"
 cp $TARGET /home/pi
 cp $TARGET /home/pi/harrogate
+cp $TARGET /usr/bin/
+
 
 #Copying the screen invert settings
 TARGET=files/Screen_settings
@@ -74,18 +76,13 @@ sudo cp $TARGET /usr/bin/
 TARGET=files/wallaby_get_id.sh
 sudo cp $TARGET /usr/bin/
 
-#sh file needed for Online Updates
-TARGET=files/updateMe.sh
-echo "Copying the Online Updator"
-cp $TARGET /home/pi
-
+sudo chmod u+x /usr/bin/wifi_*
 sudo chmod u+x /usr/bin/wallaby_*
 echo "Permissions Granted."
 
 #Copying the Backup Code
-echo Installing KIPR Backup Utility
-mkdir /home/root/got2/Backup
-sudo cp -r files/Backup/* /home/pi/got2/Backup
+TARGET=files/Backup
+sudo cp -r $TARGET /home/root/got2/
 
 
 echo "Flashing the Processor"
