@@ -14,7 +14,7 @@ os.system('systemctl stop NetworkManager')
 os.system('systemctl disable NetworkManager')
 
 os.system('ip link set wlan0 down')
-os.system('iwconfig wlan0 mode managed')            #Change the network adapter mode to managed
+os.system('iwconfig wlan0 mode managed')
 os.system('ip link set wlan0 up')
 
 os.system('systemctl start wpa_supplicant')         #Doublecheck this service is running
