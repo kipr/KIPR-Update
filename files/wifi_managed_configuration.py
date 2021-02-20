@@ -10,11 +10,11 @@ import os
 import sys
 
 os.system('systemctl stop hostapd')                 #Stop the AP service
-os.system('systemctl stop NetworkManager')
+os.system('systemctl stop NetworkManager')          
 os.system('systemctl disable NetworkManager')
 
 os.system('ip link set wlan0 down')
-os.system('iwconfig wlan0 mode managed')
+os.system('iwconfig wlan0 mode managed')            #Set the network adapter mode to managed
 os.system('ip link set wlan0 up')
 
 os.system('systemctl start wpa_supplicant')         #Doublecheck this service is running
