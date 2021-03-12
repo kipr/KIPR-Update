@@ -9,3 +9,6 @@ This repository also contains the startup scripts that are called on boot to lau
 
   -[Botui-25.8](https://github.com/kipr/botui);
   -[Libwallaby-25.8](https://github.com/kipr/libwallaby);
+  
+  Want to Contribute? Start Here!:
+  https://github.com/kipr/KIPR-Development-Toolkit
