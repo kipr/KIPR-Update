@@ -13,14 +13,16 @@ But you can also install it manually.
 2) Hit "Hide UI" in Settings.
 3) Double tap on "root terminal" in the top right of the desktop (may be in a different spot).
 4) Type the following:
-'''bash
+
+
+```bash
 mkdir dev
 cd dev
 git clone https://github.com/kipr/kipr-update
 cd kipr-update
 sudo chmod 777 wombat_update.sh
 sudo ./wombat_update.sh
-'''
+```
 
 **Latest versions:**
 
