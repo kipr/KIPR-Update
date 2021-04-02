@@ -1,8 +1,7 @@
 # KIPR-Update
 Repository for pulling updates for KIPR Controllers
+It contains files relevant to the software, as well as binaries of the software itself.
 This is pulled when you hit "Online Update" from the UI
-
-This repository also contains the startup scripts that are called on boot to launch the program. Initilizing script is "zoobee_launcher.sh"
 
 ## Ethernet Instructions
 1) Plug the Wombat into an internet source with an Ethernet Cable ("the blue internet cable")
