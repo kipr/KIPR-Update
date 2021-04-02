@@ -1,6 +1,8 @@
 # KIPR-Update
 Repository for pulling updates for KIPR Controllers
+
 It contains files relevant to the software, as well as binaries of the software itself.
+
 This is pulled when you hit "Online Update" from the UI
 
 ## Ethernet Instructions
