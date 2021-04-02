@@ -11,7 +11,7 @@ This is pulled when you hit "Online Update" from the UI
 3) Go to Settings->Update
 4) Click "Online Update"
 
-If it says "failed to clone ___"
+If it says "failed to clone ___" or "sudo: ./wombat_update.sh not found",
 
 The internet is not connected, try again a few more times and if it persists, there is an issue with the internet source.
 
