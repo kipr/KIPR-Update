@@ -52,13 +52,20 @@ echo "Copying the launcher"
 cp $TARGET /home/root
 cp $TARGET /home/root/harrogate
 
-#sh file needed to start the botui
+#Python file that starts the wifi access point
 TARGET=files/wifi_configurator.py
 echo "Copying the Wifi Configurator"
 cp $TARGET /home/pi
 cp $TARGET /home/pi/harrogate
 cp $TARGET /usr/bin/
 
+
+#Experimental python script that does managed wifi
+TARGET=files/wifi_managed_configuration.py
+echo "Copying Experimental Managed Wifi Configurator"
+cp $TARGET /home/pi
+cp $TARGET /home/pi/harrogate
+cp $TARGET /usr/bin
 
 #Copying the screen invert settings
 TARGET=files/Screen_settings
@@ -84,6 +91,18 @@ echo "Permissions Granted."
 TARGET=files/Backup
 sudo cp -r $TARGET /home/root/got2/
 
+#Adding Default Programs
+TARGET = Default_User
+sudo cp -r $TARGET /home/root/Documents/KISS
+
+#Copy the firmware
+echo "Adding updated firmware files"
+TARGET=files/wombat.bin
+sudo cp $TARGET /home/pi
+
+#Copy the wallaby_flash targetting wombat.bin
+TARGET=files/wallaby_flash
+sudo cp $TARGET /home/pi
 
 echo "Flashing the Processor"
 cd /home/pi
