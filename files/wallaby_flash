@@ -3,7 +3,7 @@
 BOOT0="/sys/class/gpio/gpio17"
 RST="/sys/class/gpio/gpio23"
 STM32FLASH='/home/pi/stm32flash/stm32flash'
-BINFILE='/home/pi/wallaby_v8.bin'
+BINFILE='/home/pi/wombat.bin'
 DEV='/dev/ttyAMA0'
 
 if [ $# -ne 0 ]; then
