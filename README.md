@@ -83,6 +83,8 @@ sudo dd if="(.img filename)" of="/dev/(drivename)" bs=4M status=progress
 #Example using BOS-Hydrogen on a SD card that is mounted at /dev/sdb
 sudo dd if="BOS-Hydrogen.img" of="/dev/sdb" bs=4M status=progress
 ```
+4) Unscrew the panel on the bottom of the Wombat and swap/insert the SD card.
+
 **Latest versions:**
 
   -[Botui-25.8](https://github.com/kipr/botui);
