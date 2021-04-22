@@ -7,5 +7,5 @@ sudo python wifi_configurator.py &
 cd harrogate
 sudo node server.js &
 sudo botui &
-sleep 10
-sudo python wifi_configurator.py &
+#sleep 10
+#sudo python wifi_configurator.py &
