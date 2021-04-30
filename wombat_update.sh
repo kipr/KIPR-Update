@@ -97,8 +97,8 @@ sudo cp -r $TARGET /home/root/Documents/KISS
 
 #Copy the firmware
 echo "Adding updated firmware files"
-TARGET=files/wombat.bin
-sudo cp $TARGET /home/pi
+TARGET=files/flash
+sudo cp $TARGET/* /home/pi
 
 #Copy the wallaby_flash targetting wombat.bin
 TARGET=files/wallaby_flash
