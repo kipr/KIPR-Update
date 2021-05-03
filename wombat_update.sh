@@ -92,7 +92,7 @@ TARGET=files/Backup
 sudo cp -r $TARGET /home/root/got2/
 
 #Adding Default Programs
-TARGET = Default_User
+TARGET=Default_User
 sudo cp -r $TARGET /home/root/Documents/KISS
 
 #Copy the firmware
