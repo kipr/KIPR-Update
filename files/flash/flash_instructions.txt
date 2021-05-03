@@ -1,0 +1,6 @@
+Make sure the wallaby_flash script has the correct BINFILE name, e.. wallaby_v8.bin, etc.
+
+wallaby_v8.bin as of 19 Aug 2018 (Josh didn't name it v8, Mustafa did)
+
+Be inside home/pi, i.e., do
+/home/pi $ sudo ./wallaby_flash

@@ -92,13 +92,12 @@ TARGET=files/Backup
 sudo cp -r $TARGET /home/root/got2/
 
 #Adding Default Programs
-TARGET = Default_User
+TARGET=Default_User
 sudo cp -r $TARGET /home/root/Documents/KISS
 
 #Copy the firmware
 echo "Adding updated firmware files"
-TARGET=files/wombat.bin
-sudo cp $TARGET /home/pi
+sudo cp files/flash/* /home/pi
 
 #Copy the wallaby_flash targetting wombat.bin
 TARGET=files/wallaby_flash
