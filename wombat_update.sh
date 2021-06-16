@@ -37,8 +37,11 @@ sudo dpkg -i pkgs/botui.deb
 
 #Harrogate
 echo "Updating harrogate..."
+sudo rm -r /home/pi/harrogate
 sudo tar -C /home/pi -zxvf pkgs/harrogate.tar.gz
-
+cd /home/pi/harrogate
+sudo npm install
+cd /home/pi
 
 ###############################
 #
