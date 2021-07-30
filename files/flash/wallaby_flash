@@ -44,3 +44,5 @@ sleep 1
 
 # reset co-processor
 ./wallaby_reset_coproc
+
+echo "Flash Complete!"
