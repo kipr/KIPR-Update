@@ -120,4 +120,4 @@ sudo ./wallaby_flash
 echo "Finished Wombat Update #$FW_VERSION"
 echo "Rebooting..."
 sleep 3
-#reboot
+reboot
