@@ -6,7 +6,7 @@ echo "   "
 echo "Starting Wombat Update #$FW_VERSION"
 echo "..."
 
-
+HOME=$(pwd)
 ###############################
 #
 # update boot files
@@ -44,7 +44,7 @@ cd /home/pi/harrogate
 sudo npm install
 sudo killall node
 sudo gulp &
-cd /home/pi
+cd $HOME
 
 ###############################
 #
@@ -120,4 +120,4 @@ sudo ./wallaby_flash
 echo "Finished Wombat Update #$FW_VERSION"
 echo "Rebooting..."
 sleep 3
-reboot
+#reboot
