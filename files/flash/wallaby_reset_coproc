@@ -1,0 +1,8 @@
+BOOT0="/sys/class/gpio/gpio17"
+RST="/sys/class/gpio/gpio23"
+
+
+echo "resetting co processor..."
+echo 1 > $RST/value
+echo 0 > $RST/value
+echo 1 > $RST/value

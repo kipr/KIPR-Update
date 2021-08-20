@@ -1,0 +1,8 @@
+BOOT0="/sys/class/gpio/gpio17"
+RST="/sys/class/gpio/gpio23"
+
+echo 17 > /sys/class/gpio/export
+echo 23 > /sys/class/gpio/export
+
+echo "out" > $BOOT0/direction
+echo "out" > $RST/direction

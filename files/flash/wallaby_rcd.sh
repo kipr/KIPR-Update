@@ -2,14 +2,9 @@
 
 BOOT0="/sys/class/gpio/gpio17"
 RST="/sys/class/gpio/gpio23"
-STM32FLASH='stm32flash'
-BINFILE='/home/pi/wallaby_v8.bin'
+STM32FLASH='/home/pi/stm32flash/stm32flash'
+BINFILE='/home/pi/wallaby_v7.bin'
 DEV='/dev/ttyAMA0'
-
-if [ $# -ne 0 ]; then
-    BINFILE=$1
-fi
-
 
 #make sure we can control BOOT0 and RST
 if [ ! -d "${BOOT0}" ]; then 
@@ -22,19 +17,7 @@ if [ ! -d "${RST}" ]; then
     ./wallaby_init_gpio 
 fi
 
-# set BOOT0 high so we stay in the bootloader on reboot
-CMD="echo 1 > ${BOOT0}/value"
-echo $CMD
-eval $CMD
-
-# reset co-processor
-./wallaby_reset_coproc
-
-# program
-sleep 1 
-CMD="${STM32FLASH} -v -S 0x08000000 -w ${BINFILE} ${DEV}"
-echo $CMD
-eval $CMD
+sleep 1
 
 # BOOT0 low to run program after reset
 CMD="echo 0 > ${BOOT0}/value"
