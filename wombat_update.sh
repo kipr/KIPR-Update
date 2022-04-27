@@ -36,14 +36,14 @@ sudo apt-get remove botui -y
 sudo dpkg -i pkgs/botui.deb
 
 #Harrogate
-echo "Updating harrogate..."
-sudo rm -r /home/pi/harrogate
-sudo tar -C /home/pi -zxvf pkgs/harrogate.tar.gz
-sudo chmod 777 /home/pi/harrogate
-cd /home/pi/harrogate
-sudo npm install
-sudo killall node
-sudo gulp &
+#echo "Updating harrogate..."
+#sudo rm -r /home/pi/harrogate
+#sudo tar -C /home/pi -zxvf pkgs/harrogate.tar.gz
+#sudo chmod 777 /home/pi/harrogate
+#cd /home/pi/harrogate
+#sudo npm install
+#sudo killall node
+#sudo gulp &
 cd $HOME
 
 ###############################
