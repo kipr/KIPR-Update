@@ -53,7 +53,7 @@ cd $HOME
 ###############################
 
 #sh file needed to start the botui
-TARGET=files/zoobee_launcher.sh
+TARGET=files/kipr_launcher.sh
 echo "Copying the launcher"
 cp $TARGET /home/root
 cp $TARGET /home/root/harrogate
