@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FW_VERSION=26.0
+FW_VERSION=27.0
 
 echo "   "
 echo "Starting Wombat Update #$FW_VERSION"
@@ -53,7 +53,7 @@ cd $HOME
 ###############################
 
 #sh file needed to start the botui
-TARGET=files/zoobee_launcher.sh
+TARGET=files/kipr_launcher.sh
 echo "Copying the launcher"
 cp $TARGET /home/root
 cp $TARGET /home/root/harrogate
@@ -98,7 +98,7 @@ TARGET=files/Backup
 sudo cp -r $TARGET /home/root/got2/
 
 #Adding Default Programs
-TARGET=Default_User
+TARGET=files/Default_User
 sudo cp -r $TARGET /home/root/Documents/KISS
 
 #Copy the firmware
