@@ -68,7 +68,7 @@ if dev_count > chan_count[1]:
 print "The best channel is " + str(best_channel)
 best_channel=str(best_channel)
 
-# ===== generate the hostapd_wallaby.conf file =====
+# ===== generate the hostapd.conf file =====
 
 #generate the ssid
 f = os.popen('wallaby_get_id.sh')
@@ -80,12 +80,14 @@ wallaby_serial = f.read()
 #gives unique password for the AP
 hash_id=hashlib.sha256(wallaby_id).hexdigest()[0:6]+'00'
 
-#strings for the /etc/hostapd_wallaby.conf file
+#strings for the /etc/hostapd.conf file
 interface='interface=wlan0\n'
 ssid='ssid=' + wallaby_serial + '-wombat\n'
 channel='channel=' + best_channel + '\n'
 wpa='wpa=3\n'
 wpa_passphrase='wpa_passphrase=' + hash_id + '\n'
+
+os.system('chmod +x /etc/hostapd_wallaby.conf')
 
 #remove any old files
 os.system('rm /etc/hostapd_wallaby.conf')

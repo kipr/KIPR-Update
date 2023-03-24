@@ -1,12 +1,12 @@
 #!/bin/bash
 
-FW_VERSION=26.0
+FW_VERSION=25.6
 
 echo "   "
 echo "Starting Wombat Update #$FW_VERSION"
 echo "..."
 
-HOME=$(pwd)
+
 ###############################
 #
 # update boot files
@@ -28,23 +28,17 @@ rm -r /usr/bin/botui
 # libwallaby
 echo "Updating libwallaby..."
 sudo apt-get remove libwallaby -y
-sudo dpkg -i pkgs/libwallaby.deb
+sudo dpkg -i pkgs/libwallaby_25.6-1_armhf.deb
 
 # botui
 echo "Updating botui..."
 sudo apt-get remove botui -y
-sudo dpkg -i pkgs/botui.deb
+sudo dpkg -i pkgs/botui_25.6-1_armhf.deb
 
 #Harrogate
-#echo "Updating harrogate..."
-#sudo rm -r /home/pi/harrogate
-#sudo tar -C /home/pi -zxvf pkgs/harrogate.tar.gz
-#sudo chmod 777 /home/pi/harrogate
-#cd /home/pi/harrogate
-#sudo npm install
-#sudo killall node
-#sudo gulp &
-cd $HOME
+echo "Updating harrogate..."
+sudo tar -C /home/pi -zxvf pkgs/harrogate.tar.gz
+
 
 ###############################
 #
@@ -58,20 +52,11 @@ echo "Copying the launcher"
 cp $TARGET /home/root
 cp $TARGET /home/root/harrogate
 
-#Python file that starts the wifi access point
+#sh file needed to start the botui
 TARGET=files/wifi_configurator.py
 echo "Copying the Wifi Configurator"
 cp $TARGET /home/pi
 cp $TARGET /home/pi/harrogate
-cp $TARGET /usr/bin/
-
-
-#Experimental python script that does managed wifi
-TARGET=files/wifi_managed_configuration.py
-echo "Copying Experimental Managed Wifi Configurator"
-cp $TARGET /home/pi
-cp $TARGET /home/pi/harrogate
-cp $TARGET /usr/bin
 
 #Copying the screen invert settings
 TARGET=files/Screen_settings
@@ -89,21 +74,18 @@ sudo cp $TARGET /usr/bin/
 TARGET=files/wallaby_get_id.sh
 sudo cp $TARGET /usr/bin/
 
-sudo chmod u+x /usr/bin/wifi_*
+#sh file needed for Online Updates
+TARGET=files/updateMe.sh
+echo "Copying the Online Updator"
+cp $TARGET /home/pi
+
 sudo chmod u+x /usr/bin/wallaby_*
 echo "Permissions Granted."
 
 #Copying the Backup Code
-TARGET=files/Backup
-sudo cp -r $TARGET /home/root/got2/
-
-#Adding Default Programs
-TARGET=Default_User
-sudo cp -r $TARGET /home/root/Documents/KISS
-
-#Copy the firmware
-echo "Adding updated firmware files"
-sudo cp -r files/flash/* /home/pi
+echo Installing KIPR Backup Utility
+mkdir /home/root/got2/Backup
+sudo cp -r files/Backup/* /home/pi/got2/Backup
 
 
 echo "Flashing the Processor"
